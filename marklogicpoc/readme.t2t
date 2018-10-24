@@ -1,0 +1,10 @@
+
+- 1 Start Marklogic
+- 2 Create DB and forest called playground
+- 3 Insert some data in the query console, eg:
+	http://localhost:8000/qconsole/
+	declareUpdate(); xdmp.documentInsert('/fun-test/test/hello3.json', {'greeting': 'Hello World3!'});
+- 4	Create RestAPI
+	curl --anyauth --user admin:admin -X POST -d@"C:\Users\liliana.ortiz\Documents\Books\mls-fundamentals\unit06\playground_config.json" -i -H "Content-type: application/json" http://localhost:8002/v1/rest-apis
+- 5 Change this "C:\Users\liliana.ortiz\Documents\Books\mls-fundamentals\unit06\playground_config.json"	with the file location (The file is in the resources folder of the project playground_config.json)
+	
