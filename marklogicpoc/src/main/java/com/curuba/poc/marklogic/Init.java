@@ -11,13 +11,15 @@ import com.marklogic.client.DatabaseClientFactory.Authentication;
 public class Init {
 
     public static void main(String... args) {
-        DatabaseClient client = DatabaseClientFactory.newClient("localhost", 8051, "admin", "admin",
+        DatabaseClient client = DatabaseClientFactory.newClient("localhost", 8051, "user-rol-test", "admin",
                 Authentication.DIGEST);
         JSONDocumentManager docMgr = client.newJSONDocumentManager();
         JacksonHandle handle = new JacksonHandle();
-        docMgr.read("/fun-test/test/hello3.json", handle);
+        docMgr.read("/fun-test/polo/hello02.json", handle);
         JsonNode doc = handle.get();
         System.out.println(doc);
         client.release();
     }
+
+
 }
